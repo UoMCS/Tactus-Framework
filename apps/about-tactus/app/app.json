@@ -1,0 +1,13 @@
+{
+  "name": "About Tactus",
+  "version": "0.0.1",
+  "description": "A little about the Tactus screens",
+  "author": "Pez Cuckow",
+  "email": "email@pezcuckow.com",
+  "icon": "desktop",
+  "color": "blue",
+  "tags": [
+    "important",
+    "about"
+  ]
+}

@@ -1,0 +1,23 @@
+.example {
+  margin-bottom: 10px;
+}
+
+.grid-example .row {
+  margin-top: 10px;
+}
+
+.grid-example [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+}
+
+body {
+  background: rgb(156, 29, 106);
+  color: white;
+}
+
+.grid-example {
+  color: black;
+}

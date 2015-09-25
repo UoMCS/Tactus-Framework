@@ -1,0 +1,23 @@
+/*!
+ * This file is automatically added to the header of your app
+ */
+html,
+iframe {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -ms-content-zooming: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-scroll-chaining: none;
+  -ms-scroll-rails: railed;
+}
+a:active,
+a:focus {
+  border: none;
+  outline: none;
+}
+.jumbotron {
+  margin-bottom: 0px;
+}
+/*# sourceMappingURL=/css/app.css.map */

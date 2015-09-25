@@ -1,0 +1,8 @@
+{
+  "name": "XKCD",
+  "version": "0.0.1",
+  "description": "View the latest XKCD",
+  "author": "Pez Cuckow",
+  "icon": "pencil",
+  "color": "blue"
+}

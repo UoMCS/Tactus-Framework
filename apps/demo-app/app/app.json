@@ -1,0 +1,11 @@
+{
+  "name": "Demo App",
+  "version": "0.0.1",
+  "description": "A demo app featuring some functionality of Tactus",
+  "author": "Pez Cuckow",
+  "email": "email@pezcuckow.com",
+  "icon": "laptop",
+  "color": "red",
+  "tags": [
+  ]
+}

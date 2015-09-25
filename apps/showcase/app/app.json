@@ -1,0 +1,9 @@
+{
+  "name": "Showcase",
+  "version": "0.0.1",
+  "description": "Student showcase",
+  "author": "Pez Cuckow",
+  "icon": "eye",
+  "color": "yellow",
+  "tags": "about"
+}

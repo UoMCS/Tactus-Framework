@@ -1,0 +1,13 @@
+body {
+  background: rgb(29, 156, 79);
+  color: white;
+}
+
+img {
+  border-radius: 20px;
+}
+
+a, a:hover, a:active {
+  color: white;
+  text-decoration: underline;
+}
