@@ -6,7 +6,7 @@ All students are invited to contribute to the project, creating "apps" that will
 Of course! Apps are essentially small websites, with dynamic content provided by PHP/Javascript.
 The code in this repository includes a Framework of PHP/JS and CSS to make developing easier and some example apps.
 
-You can get started by following the [documentation](/UoMCS/Tactus-Framework/blob/master/apps/documentation/app/documentation.md)
+You can get started by following the [documentation](/apps/documentation/app/documentation.md)
 within this repository under apps/documentation/app/documentation.md, which [is also provided as a web page](https://web.cs.manchester.ac.uk/tactus-apps/core/documentation/).
 
 # I have another question - who should I ask?
