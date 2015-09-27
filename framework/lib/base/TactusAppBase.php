@@ -85,7 +85,7 @@ abstract class TactusAppBase implements JsonSerializable {
       return false;
     }
 
-    $topLevelVariables = array('name', 'version', 'description', 'author', 'icon', 'url', 'visible', 'email');
+    $topLevelVariables = array('name', 'version', 'description', 'author', 'icon', 'url', 'visible', 'email', 'username');
 
     foreach($topLevelVariables as $var) {
       if (isset($json[$var]))

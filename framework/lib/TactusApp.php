@@ -14,6 +14,8 @@ class TactusApp extends TactusAppBase {
   protected $visible = true;
   protected $tags = array();
   protected $email = "unknown@example.com";
+  protected $popularity = 0;
+  protected $username = null;
 
   public function isValid() {
     return $this->validApp;
@@ -64,7 +66,7 @@ class TactusApp extends TactusAppBase {
   }
 
   public function getPopularity() {
-    return (isset($this->popularity) ? $this->popularity : 0);
+    return $this->popularity;
   }
 
   public function getUsername() {
@@ -145,6 +147,35 @@ class TactusApp extends TactusAppBase {
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       return $db;
+    }
+
+    throw new TactusException('Unable to connect to student database and but fallback information was provided.');
+  }
+
+  /**
+   * Make a Mysqli connection to the student database
+   * If developing locally this falls back to the passed arguments
+   */
+  public function getMysqli($fallbackHost = false, $fallbackDatabase = false,
+                         $fallbackUsername = false, $fallbackPassword = false) {
+    // If admin is loaded use production DB credentials
+    if(class_exists('TactusAdmin\StudentDatabaseFactory')) {
+      $db = $this->getAdminMysqli();
+      if($db) {
+        return $db;
+      }
+    }
+
+    // If the admin panel isn't loaded, or the user didn't have an account, fallback to passed arguments
+    if($fallbackHost && $fallbackDatabase && $fallbackUsername) {
+      $db = new mysqli($host, $username, $password, $database);
+      if($db->connect_errno) {
+        $error = sprintf("Unable to make a mysqli connection to fallback db '%s' with user %s@%s: %s", $database, $host, $username, $mysqli->connect_error);
+        throw new TactusException($error);
+        return false;
+      } else {
+        return $db;
+      }
     }
 
     throw new TactusException('Unable to connect to student database and but fallback information was provided.');
